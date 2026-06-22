@@ -1,3 +1,11 @@
+/**
+ * Task:
+ *  program to define a structure to handle book record(bookId, title, price) also 
+ *  define function userInputBook and displayBook to take input book data from user
+ *  and display bok data on the screen.
+ */
+
+
 #include <iostream>
 #include <string.h>
 
