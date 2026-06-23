@@ -3,9 +3,9 @@
  *  program to define a structure to handle book record(bookId, title, price) also 
  *  define function userInputBook and displayBook to take input book data from user
  *  and display bok data on the screen.
- *  
+ * 
  *  Update:
- *   how to use function inside structure as structure member element.
+ *   how to use Access Specifier in structure.
  */
 
  
@@ -16,18 +16,19 @@ using namespace std;
 
 struct Book
 {
+    private:
     int bookId;
     char title[20];
     float price;
     
+    public:
     void displayBook()
     {
         cout<<"\n"<<bookId<<" "<<title<<" "<<price;
     }
-
     void userInputBook()
     {
-        cout<<"Enter 3rd Book bookId, title, price "<<"\n";
+        cout<<"Enter Book Details (bookId, title, price)"<<"\n";
         cin>>bookId;
         /*policy: guarding to not input negetive bookId*/
         if (bookId < 0)
@@ -40,16 +41,13 @@ struct Book
 
 int main(void)
 {
-    Book book1 = {1, "C", 425.50f}; //can use struct keyword or can skip it
-    Book book2, book3;
-    book2.bookId = -2;
-    strcpy(book2.title, "Cpp");
-    book2.price = 324.75f;
-    book3.userInputBook();
-
+    /**
+     * here we can't access the properties or member of Book directly as they are 
+     * private to that structure, so we can only use methods to access or update them.  
+     */
+    Book book1;
+    book1.userInputBook();
     book1.displayBook();
-    book2.displayBook();
-    book3.displayBook();
     cout<<endl;
 
     return 0;
