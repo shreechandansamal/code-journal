@@ -16,6 +16,7 @@ struct Book
     int bookId;
     char title[20];
     float price;
+    
     void displayBook()
     {
         cout<<"\n"<<bookId<<" "<<title<<" "<<price;
@@ -25,6 +26,9 @@ struct Book
     {
         cout<<"Enter 3rd Book bookId, title, price "<<"\n";
         cin>>bookId;
+        /*policy: guarding to not input negetive bookId*/
+        if (bookId < 0)
+            bookId =- bookId;
         cin.ignore();
         cin.getline(title, 20);
         cin>>price;
@@ -35,7 +39,7 @@ int main(void)
 {
     Book book1 = {1, "C", 425.50f}; //can use struct keyword or can skip it
     Book book2, book3;
-    book2.bookId = 2;
+    book2.bookId = -2;
     strcpy(book2.title, "Cpp");
     book2.price = 324.75f;
     book3.userInputBook();
