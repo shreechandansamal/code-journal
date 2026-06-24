@@ -14,7 +14,7 @@ using namespace std;
         int imgNum;
     public:
         void set(int r, int i){realNum = r; imgNum = i;} //set
-        void print(){cout<<realNum<<" + "<<imgNum<<"i"<<endl;} //get
+        void print(){cout<<realNum<<" + "<<imgNum<<"i"<<endl;}
         void add(Complex c){cout<<realNum + c.realNum<<" + "<<imgNum + c.imgNum<<"i"<<endl;}
  };
 
