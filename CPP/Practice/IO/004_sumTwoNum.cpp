@@ -4,7 +4,9 @@ using namespace std;
 
 int main()
 {
-    int num1 = 3;
-    int num2 = 4;
+    int num1;
+    int num2;
+    cout<<"Enter two Numbers ";
+    cin>>num1>>num2;
     cout<<"sum of two number is "<<num1 + num2<<endl;
 }
