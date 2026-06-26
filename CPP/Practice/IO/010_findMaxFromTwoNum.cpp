@@ -1,3 +1,8 @@
+/**
+ * Task: 
+ *  Write a C++ program to find the maximum of two numbers.
+ */
+
 #include <iostream>
 
 using namespace std;

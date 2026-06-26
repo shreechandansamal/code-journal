@@ -1,3 +1,8 @@
+/**
+ * Task: 
+ *  Write a C++ program to calculate an average of 3 numbers.
+ */
+
 #include <iostream>
 
 using namespace std;
