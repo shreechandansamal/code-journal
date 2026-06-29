@@ -17,6 +17,9 @@ class LargeNum{
 
     public:
         void setNum(int x, int y, int z) {num1 = x; num2 = y; num3 = z;}
+        int getNum1() {return num1;}
+        int getNum2() {return num2;}
+        int getNum3() {return num3;}
         int getLargeNum() {return largeNum;}
         void findLargeNum() { largeNum = (num1 >= num2 && num1 >= num3) ? num1 : (num2 >= num3) ? num2 : num3;}
 };
@@ -31,7 +34,7 @@ int main()
     cin>>n1>>n2>>n3;
     largenum.setNum(n1, n2, n3);
     largenum.findLargeNum();
-    cout<<"Largest Number is "<<largenum.getLargeNum()<<endl;
+    cout<<"Largest Number in between "<<largenum.getNum1()<<", "<<largenum.getNum2()<<" and "<<largenum.getNum3()<<" is "<<largenum.getLargeNum()<<endl;
 
     return 0;
 }
