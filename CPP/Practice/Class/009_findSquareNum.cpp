@@ -12,14 +12,17 @@ class Square{
     private:
         float n;
         float s;
+        static int count;//count function
 
     public:
         void setNum(float x) {n = x;}
         float getNum() {return n;}
         float getSquare() {return s;}
-        void calSquare() {s = n * n;}
+        void calSquare() {s = n * n; count++;/*lets count here*/}
+        int getCount() {return count;}
 };
 
+int Square::count = 0;
 
 int main()
 {
@@ -31,6 +34,7 @@ int main()
     square.setNum(tN);
     square.calSquare();
     cout<<"Square of "<<square.getNum()<<" is "<<square.getSquare()<<endl;
+    cout<<"Number of times a Function (using count) called is "<<square.getCount()<<endl;
 
     return 0;
 }
