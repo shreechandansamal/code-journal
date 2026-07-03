@@ -14,7 +14,7 @@ using namespace std;
         int realNum;
         int imgNum;
     public:
-        Complex() //parameterized constructor
+        Complex() //non parameterized constructor
         {
             realNum = 0;
             imgNum = 0;
