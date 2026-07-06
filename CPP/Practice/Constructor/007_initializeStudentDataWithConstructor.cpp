@@ -17,7 +17,8 @@ class Student
         int age;
         int standard;
     public:
-        Student(int a, const char* b, int c, int d)
+        Student(int a, const char b[], int c, int d) /* compiler will convert 
+                                                      * const char b[] to const char* b */
         {
             id = a;
             strcpy(name, b);
