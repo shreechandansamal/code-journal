@@ -1,6 +1,6 @@
 /**
  * Learn:
- *  this is an example of Binary Operator Overloading.
+ *  this is an example of Unary and Binary Operator Overloading.
  */
 
 #include <iostream>
@@ -53,13 +53,13 @@ using namespace std;
 
     c1.setData(3, 4);
     c2.setData(5, 6);
-    c3 = c1 + c2;
+    c3 = c1 + c2; // c1.operator+(c2);
 
     c1.showData();
     c2.showData();
     c3.showData();
 
-    c4 =- c3;
+    c4 =- c3; // c3.operator-();
     c4.showData();
 
     return 0;
