@@ -16,7 +16,7 @@ class VolumeCube
         VolumeCube(float s) {side = s; }
         void setSide(float s) { side = s; }
         float getSide() { return side; }
-        float calVolume() { return side * side; }
+        float calVolume() { return side * side * side; }
 };
 
 int main()
